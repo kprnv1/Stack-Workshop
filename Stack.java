@@ -1,9 +1,9 @@
 public class Stack {
     Object[] stackMas;
-    int top = 0;
+    int TOP = 0;
 
     public int getTop() {
-        return top;
+        return TOP;
     }
 
     public void newStack() {
@@ -11,14 +11,14 @@ public class Stack {
     }
 
     public void push(Object newStack) {
-        if (top < stackMas.length) {
-            stackMas[top++] = newStack;
+        if (TOP < stackMas.length) {
+            stackMas[TOP++] = newStack;
         }
     }
 
     public Object pop() {
         Object number = stackMas[getTop() - 1];
-        top--;
+        TOP--;
         return number;
     }
 

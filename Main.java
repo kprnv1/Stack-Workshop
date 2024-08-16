@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Stack stack = new Stack();
+        
         stack.newStack();
         stack.push("One");
         stack.push("2");
