@@ -22,7 +22,6 @@ public class Stack {
 
     public void pop() {
         stackMas[MAXSIZE - 1] = null;
-        MAXSIZE--;
     }
 
     public Object peek() {

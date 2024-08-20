@@ -6,13 +6,13 @@ public class Main {
         stack.push("One");
         stack.push("2");
         stack.push("3");
-        stack.push("4");
-        stack.push("5");
-        stack.push("Six");
-        stack.push("Seven");
-        stack.push("8");
-        stack.push("9");
-        stack.push("10");
+//        stack.push("4");
+//        stack.push("5");
+//        stack.push("Six");
+//        stack.push("Seven");
+//        stack.push("8");
+//        stack.push("9");
+//        stack.push("10");
 
         stack.print();
 
