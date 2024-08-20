@@ -19,18 +19,15 @@ public class Main {
         stack.pop();
 
         System.out.println();
-
         stack.peek();
 
         stack.push("11");
         stack.push("12");
 
         System.out.println();
-
         stack.print();
 
         System.out.println();
-
         stack.peek();
 
     }

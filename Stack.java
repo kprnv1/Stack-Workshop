@@ -6,27 +6,24 @@ public class Stack {
         stackMas = new Object[++MAXSIZE];
     }
 
-    protected Object[] push(Object newStack) {
+    protected void push(Object newStack) {
         stackMas[MAXSIZE - 1] = newStack;
         Object[] newStackMas = new Object[++MAXSIZE];
         addTo(stackMas, newStackMas);
         stackMas = newStackMas;
         addTo(newStackMas, stackMas);
-        return stackMas;
     }
 
-    private Object[] addTo(Object[] mas1, Object[] mas2) {
+    private void addTo(Object[] mas1, Object[] mas2) {
         System.arraycopy(mas1, 0, mas2, 0, MAXSIZE - 1);
-        return mas2;
     }
 
     protected void pop() {
         stackMas[MAXSIZE - 1] = null;
     }
 
-    protected Object peek() {
+    protected void peek() {
         System.out.println("Последний элемент " + stackMas[MAXSIZE - 2]);
-        return stackMas[MAXSIZE - 2];
     }
 
     protected void print() {
