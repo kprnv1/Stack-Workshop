@@ -1,22 +1,17 @@
-import java.util.Arrays;
-
 public class Stack {
     private Object[] stackMas;
     int MAXSIZE;
 
     public void newStack() {
         stackMas = new Object[++MAXSIZE];
-
     }
 
     public Object[] push(Object newStack) {
-            stackMas[MAXSIZE - 1] = newStack;
-
+        stackMas[MAXSIZE - 1] = newStack;
         Object[] newStackMas = new Object[++MAXSIZE];
-            addTo(stackMas, newStackMas);
-            stackMas = newStackMas;
-            addTo(newStackMas, stackMas);
-
+        addTo(stackMas, newStackMas);
+        stackMas = newStackMas;
+        addTo(newStackMas, stackMas);
         return stackMas;
     }
 
@@ -25,12 +20,8 @@ public class Stack {
         return mas2;
     }
 
-//    public void removeStek(Object[] stackMas) {
-//        Arrays.fill(stackMas, null);
-//    }
-
     public void pop() {
-        stackMas[MAXSIZE - 2] = null;
+        stackMas[MAXSIZE - 1] = null;
         MAXSIZE--;
     }
 
@@ -38,9 +29,10 @@ public class Stack {
         return stackMas[MAXSIZE - 1];
     }
 
-    public Object getIndex(int index) {
-        return stackMas[index];
+    public void print() {
+        for (int i = 0; i < stackMas.length-1; i++) {
+            System.out.println(i + " = " + stackMas[i]);
+        }
     }
-
 
 }
