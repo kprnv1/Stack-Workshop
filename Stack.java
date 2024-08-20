@@ -25,11 +25,12 @@ public class Stack {
     }
 
     public Object peek() {
-        return stackMas[MAXSIZE - 1];
+        System.out.println("Последний элемент " + stackMas[MAXSIZE - 2]);
+        return stackMas[MAXSIZE - 2];
     }
 
     public void print() {
-        for (int i = 0; i < stackMas.length-1; i++) {
+        for (int i = 0; i < stackMas.length - 1; i++) {
             System.out.println(i + " = " + stackMas[i]);
         }
     }
