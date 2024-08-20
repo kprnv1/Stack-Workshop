@@ -4,7 +4,9 @@ public class Main {
         stack.newStack();
 
         stack.push("One");
+
         stack.push("2");
+
         stack.push("3");
 
 //        stack.push("4");
@@ -15,16 +17,17 @@ public class Main {
 //        stack.push("9");
 //        stack.push("10");
 
-        for (int i = 0; i < stack.MAXSIZE; i++) {
+        for (int i = 0; i < stack.MAXSIZE-1; i++) {
             System.out.println(i + " = " + stack.getIndex(i));
         }
+
         stack.pop();
 //
-//        stack.push("11");
-//        stack.push("12");
+        stack.push("11");
+        stack.push("12");
 //
         System.out.println();
-        for (int i = 0; i < stack.MAXSIZE; i++) {
+        for (int i = 0; i < stack.MAXSIZE-1; i++) {
             System.out.println(i + " = " + stack.getIndex(i));
         }
 
